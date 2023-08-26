@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "../Button/button";
+import styles from "./Coins.module.sass";
 
 const Coins = () => {
     const [coins, setCoins] = useState([]); // Устанавливаем начальное значение как пустой массив
@@ -17,23 +18,29 @@ const Coins = () => {
             console.error('Error fetching data:', error);
         }
     };
+    
+    const formatPrice = (price) => {
+      return Number(price).toFixed(2);
+    }
 
     return (
-      <div className="table">
-        <div className="table__header">Символ монеты</div>
-        <div className="table__header">Логотип монеты</div>
-        <div className="table__header">Цена в USD</div>
-        <div className="table__header">Рыночная капитализация в USD</div>
-        <div className="table__header">Изменение цены за 24 часа в %</div>
-        <div className="table__header"></div>
+
+      <div className={styles.table}>
+        <div className={styles.table__header}>Символ монеты</div>
+        <div className={styles.table__header}>Логотип монеты</div>
+        <div className={styles.table__header}>Цена в USD</div>
+        <div className={styles.table__header}>Рыночная капитализация в USD</div>
+        <div className={styles.table__header}>Изменение цены за 24 часа в %</div>
+        <div className={styles.table__header}></div>
     
         {coins.map((coin) => (
           <React.Fragment key={coin.id}>
-            <div className="table__cell">{coin.symbol}</div>
-            <div className="table__cell">{coin.priceUsd}</div>
-            <div className="table__cell">{coin.marketCapUsd}</div>
-            <div className="table__cell">{coin.volumeUsd24Hr}</div>  
-            <div className="table__cell">
+            <div className={styles.table__cell}>{coin.symbol}</div>
+            <div className={styles.table__cell}>{coin.symbol}</div>
+            <div className={styles.table__cell}>${formatPrice(coin.priceUsd)}</div>
+            <div className={styles.table__cell}>${formatPrice(coin.marketCapUsd)}</div>
+            <div className={styles.table__cell}>${formatPrice(coin.volumeUsd24Hr)}</div>  
+            <div className={styles.table__cell}>
               <Button text="Add"/>
             </div>
           </React.Fragment>
