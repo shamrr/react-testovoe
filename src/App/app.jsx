@@ -2,11 +2,15 @@ import React, {useEffect, useState } from "react";
 import Coins from "../Coins/coins";
 import Pagination from "../Pagination/pagination";
 
+import Header from "../Header/header";
+import Modal from "../Modal/modal";
+
 const App = () => {
     const [coins, setCoins] = useState([]); // Устанавливаем начальное значение как пустой массив
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
     const [coinsPerPage] = useState(10);
+    const [portfelItems, setPortfelItems] = useState([]);
 
     useEffect(() => {
         fetchData();
@@ -14,8 +18,6 @@ const App = () => {
 
     const fetchData = async () => {
         try {
-            setLoading(true);
-            
             const response = await fetch('https://api.coincap.io/v2/assets');
             const responseCoins = await response.json();
             setCoins(responseCoins.data); 
@@ -23,6 +25,7 @@ const App = () => {
             setLoading(false);
         } catch (error) {
             console.error('Error fetching data:', error);
+            setLoading(false);
         }
     };
 
@@ -32,15 +35,26 @@ const App = () => {
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
 
+    const addToPortfel = (prod) => {
+        setPortfelItems(prevItems => [...prevItems, prod]);
+    }
+
     return(
         <div>
-            <Coins coins={currentCoins} loading={loading}/>
-            <Pagination 
-                coinsPerPage={coinsPerPage} 
-                totalCoins={coins.length}
-                paginate={paginate}
+            <Header
+                coins={coins}   
+                portfelItems={portfelItems} 
             />
+            <main>
+                <Coins coins={currentCoins} loading={loading} addToPortfel={addToPortfel}/>
+                <Pagination 
+                    coinsPerPage={coinsPerPage} 
+                    totalCoins={coins.length}
+                    paginate={paginate}
+                />
+            </main>
         </div>
+        
     )
 }
 
