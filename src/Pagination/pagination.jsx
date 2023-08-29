@@ -9,15 +9,9 @@ const Pagination = ({ coinsPerPage, totalCoins, paginate }) => {
         pageNumbers.push(i);
     }
     
-    // const handleClick = () => {
-    //     setIsClicked(!isClicked);
-    // };
-
-    // const liClasses = {styles.pagination}
-
     return (
         <div>
-            <ul className={styles.pagination}>
+            <ul className={styles.pagination} >
                 { 
                     pageNumbers.map(number => (
                         <li className={styles.pagination__item} key={number}>
