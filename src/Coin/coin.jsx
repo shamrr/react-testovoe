@@ -71,7 +71,7 @@ const Coin = (  ) => {
                     </div> */}
                     <div className={styles.coin__buttons}>
                         <Button text="Add"/>
-                        <Link to={'/'}>
+                        <Link to={'/react-testovoe'}>
                             <Button text="Back"/>
                         </Link>
                     </div>

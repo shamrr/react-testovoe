@@ -13,7 +13,7 @@ reactDom.render(
                 path="/react-testovoe" element={<App />} 
             />
             <Route 
-                path="/coin/:coinId" 
+                path="react-testovoe/coin/:coinId" 
                 element={<Coin />} 
             />
         </Routes>
