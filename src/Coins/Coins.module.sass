@@ -1,0 +1,45 @@
+.table
+    width: 100%
+    max-width: 1400px
+    margin: 0 auto
+    padding: 40px 0
+    &__top
+        display: grid
+        grid-template-columns: repeat(2, minmax(180px, min-content)) repeat(3, 1fr) 150px
+        justify-items: center
+        align-items: center
+        margin-bottom: 50px
+        font-size: 14px
+        font-weight: 700  
+    &__row
+        display: grid
+        grid-template-columns: repeat(2, minmax(180px, min-content)) repeat(3, 1fr) 150px
+        justify-items: center
+        align-items: center
+    &__link
+        display: block
+        text-decoration: none
+        color: #000
+        padding: 15px 0
+        transition: .2s all
+        &:not(::last-child)
+            margin-bottom: 40px
+        &:hover
+            font-weight: 700
+
+@media only screen and (max-width: 900px)
+    .table
+        &__top
+            grid-template-columns: repeat(5, 1fr) 100px
+            margin-bottom: 20px
+        &__row
+            grid-template-columns: repeat(5, 1fr) 100px
+@media only screen and (max-width: 740px)
+    .table
+        overflow-x: auto
+        &__top
+            grid-template-columns: repeat(3, 100px) 160px  repeat(2, 100px)
+        &__row
+            grid-template-columns: repeat(5, 160px) 100px
+            grid-template-columns: repeat(3, 100px) 160px  repeat(2, 100px)
+

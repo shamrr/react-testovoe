@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap')
+body
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Roboto Mono', monospace
+.header
+    height: 80px
+    border-bottom: 2px solid #b09999
+    padding: 0
+    margin: 0  
+    display: flex
+    justify-content: center
+    align-items: center
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &:hover
+        box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .3)
+    &__container
+        width: 100%
+        max-width: 1400px
+    &__coin
+        font-weight: 800
+        color: #000
+        span
+            font-weight: 400
+    &__portfel
+        img
+            width: 35px
+            height: 35px
+
+@media only screen and (max-width: 348px)
+    .header
+        height: 120px

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-testovoe/static/css/main.ed16c02c.css",
+    "main.js": "/react-testovoe/static/js/main.1ff6c0ca.js",
+    "index.html": "/react-testovoe/index.html",
+    "main.ed16c02c.css.map": "/react-testovoe/static/css/main.ed16c02c.css.map",
+    "main.1ff6c0ca.js.map": "/react-testovoe/static/js/main.1ff6c0ca.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed16c02c.css",
+    "static/js/main.1ff6c0ca.js"
+  ]
+}
