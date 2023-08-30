@@ -26,4 +26,20 @@
             margin-bottom: 40px
         &:hover
             font-weight: 700
-    
+
+@media only screen and (max-width: 900px)
+    .table
+        &__top
+            grid-template-columns: repeat(5, 1fr) 100px
+            margin-bottom: 20px
+        &__row
+            grid-template-columns: repeat(5, 1fr) 100px
+@media only screen and (max-width: 740px)
+    .table
+        overflow-x: auto
+        &__top
+            grid-template-columns: repeat(3, 100px) 160px  repeat(2, 100px)
+        &__row
+            grid-template-columns: repeat(5, 160px) 100px
+            grid-template-columns: repeat(3, 100px) 160px  repeat(2, 100px)
+

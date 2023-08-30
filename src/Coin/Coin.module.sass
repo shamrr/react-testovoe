@@ -7,6 +7,7 @@
         width: 100%
         max-width: 1400px
         display: flex
+        flex-wrap: wrap
     &__image 
         margin-right: 120px
         img
@@ -35,3 +36,17 @@
         bottom: 30px
         display: flex
         gap: 20px
+
+@media only screen and (max-width: 1100px)
+    .coin
+        &__wrapper
+            justify-content: center
+        &__buttons
+            bottom: -20px
+@media only screen and (max-width: 900px)
+    .coin
+        padding: 50px 20px
+@media only screen and (max-width: 400px)
+    .coin
+        &__buttons
+            right: 100px
