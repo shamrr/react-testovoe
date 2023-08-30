@@ -10,7 +10,7 @@ reactDom.render(
     <Router>
         <Routes>
             <Route 
-                path="/" element={<App />} 
+                path="/react-testovoe" element={<App />} 
             />
             <Route 
                 path="/coin/:coinId" 

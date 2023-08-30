@@ -3,7 +3,6 @@ import Coins from "../Coins/coins";
 import Pagination from "../Pagination/pagination";
 
 import Header from "../Header/header";
-import Modal from "../Modal/modal";
 
 const App = () => {
     const [coins, setCoins] = useState([]); // Устанавливаем начальное значение как пустой массив

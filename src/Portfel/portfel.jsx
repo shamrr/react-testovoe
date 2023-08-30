@@ -7,12 +7,12 @@ const Portfel = ({ portfelItems }) => {
             <ul className={styles.portfel__list}>
                 {
                     
-                    portfelItems.map(item => (
-                        <li className={styles.portfel__item} key={item.id}>
-                            {item}
+                    // portfelItems.map(item => (
+                    //     <li className={styles.portfel__item} key={item.id}>
+                    //         {item}
                             
-                        </li>
-                    ))
+                    //     </li>
+                    // ))
                 }
             </ul>
         </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./Pagination.module.sass"
 
 const Pagination = ({ coinsPerPage, totalCoins, paginate }) => {
-    const [isClicked, setIsClicked] = useState(false);
+    // const [isClicked, setIsClicked] = useState(false);
     const pageNumbers = [];
 
     for(let i = 1; i <= Math.ceil(totalCoins / coinsPerPage); i++) {
